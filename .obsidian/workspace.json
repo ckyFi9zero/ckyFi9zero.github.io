@@ -25,10 +25,14 @@
             "id": "2a5eace3a4fe479b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "index.html.md",
+                "bFile": "index.html.md",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: index.html  (Working Tree)"
             }
           }
         ],
@@ -191,9 +195,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "index.html.md"
+              },
               "icon": "lucide-info",
-              "title": "笔记属性"
+              "title": "index.html的笔记属性"
             }
           }
         ],
@@ -215,19 +221,54 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2a5eace3a4fe479b",
+  "active": "5eb0469ea11e81fc",
   "lastOpenFiles": [
-    "未命名.md",
-    "让我们开始吧/Flowchart.canvas",
-    "让我们开始吧/git.md",
-    "插件/目前已经下载的插件.md",
-    "模板",
-    "附件/Pasted image 20260209112755.png",
-    "附件/git.png",
-    "附件",
-    "插件",
-    "让我们开始吧",
+    "scripts/update_cv_json.sh",
+    "scripts/cv_markdown_to_json.py",
+    "scripts",
+    "markdown_generator/talks.tsv",
+    "markdown_generator/talks.py",
+    "markdown_generator/publications.tsv",
+    "markdown_generator/talks.ipynb",
+    "markdown_generator/README.md",
+    "markdown_generator/pubsFromBib.py",
+    "markdown_generator/PubsFromBib.ipynb",
+    "markdown_generator/publications.py",
+    "markdown_generator/publications.ipynb",
+    "images/themes/homepage-light.png",
+    "images/themes/homepage-dark.png",
+    "images/themes/homepage-air-light.png",
+    "images/themes/homepage-air-dark.png",
+    "images/profile.png",
+    "images/favicon.svg",
+    "images/favicon-512x512.png",
+    "images/favicon-32x32.png",
+    "images/favicon-192x192.png",
+    "images/editing-talk.png",
+    "_talks/2014-03-01-talk-3.md",
+    "_talks/2014-02-01-talk-2.md",
+    "_talks/2013-03-01-tutorial-1.md",
+    "_talks/2012-03-01-talk-1.md",
+    "_publications/2025-06-08-paper-title-number-5.md",
+    "_publications/2024-02-17-paper-title-number-4.md",
+    "_publications/2015-10-01-paper-title-number-3.md",
+    "_publications/2010-10-01-paper-title-number-2.md",
+    "_publications/2009-10-01-paper-title-number-1.md",
+    "_posts/2199-01-01-future-post.md",
+    "_posts/2015-08-14-blog-post-4.md",
+    "_posts/2014-08-14-blog-post-3.md",
+    "_posts/2013-08-14-blog-post-2.md",
+    "_posts/2012-08-14-blog-post-1.md",
+    "_portfolio/portfolio-1.md",
+    "_drafts/post-draft.md",
     "README.md",
-    "欢迎.md"
+    "CONTRIBUTING.md",
+    "_teaching/2015-spring-teaching-2.md",
+    "_teaching/2014-spring-teaching-1.md",
+    "_pages/terms.md",
+    "_pages/sitemap.md",
+    "_pages/non-menu-page.md",
+    "_pages/markdown.md",
+    "让我们开始吧/Flowchart.canvas"
   ]
 }
