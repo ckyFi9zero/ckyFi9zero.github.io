@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About Me"
+title: "关于我"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,38 +8,38 @@ redirect_from:
   - /about.html
 ---
 
-Hello! I am **Kuangyi Chen (陈旷镒)**. 
+您好！我是 **陈旷镒 (Kuangyi Chen)**。
 
-I am currently a first-year Master's student at the **School of Automation**, [Hangzhou Dianzi University (HDU)](https://www.hdu.edu.cn/). I am a member of the **[HDU RAS Lab](https://hdu-raslab.github.io/)** (Robot Autonomous Systems Laboratory), advised by **Prof. [Botao Zhang]**. 
+我目前是 [杭州电子科技大学 (HDU)](https://www.hdu.edu.cn/) **自动化学院** 的一名研一硕士生。我是 **[HDU RAS Lab](https://hdu-raslab.github.io/)** (机器人自主系统实验室) 的成员，师从 **[张波涛] 教授**。
 
-Prior to this, I received my B.S. degree from the Sino-Russian Joint Institute (HDU & ITMO University) with a double degree, graduating as an **Outstanding Graduate**.
+在此之前，我毕业于杭电圣光机联合学院 (HDU & ITMO University) 并获得双学位，被评为 **优秀毕业生**。
 
-My research interests lie in the intersection of **Robotics** and **Computer Vision**, with a particular focus on:
-* **SLAM** (Simultaneous Localization and Mapping)
-* **Perception in Adverse Weather** (Rain, Fog, Snow removal)
-* **Multi-sensor Fusion** (LiDAR + Camera)
+我的研究兴趣主要集中在 **机器人学** 和 **计算机视觉** 的交叉领域，特别关注：
+* **SLAM** (同步定位与建图)
+* **恶劣天气下的感知** (去雨、去雾、去雪)
+* **多传感器融合** (激光雷达 + 相机)
 
-🔥 News
+🔥 动态
 ======
-* **[Aug. 2025]** 🥇 Won the **National Gold Award** in the 20th China Graduate Electronics Design Contest.
-* **[Jul. 2025]** 🥉 Won the **National Bronze Award** in the China Graduate Robot Innovation Design Competition.
-* **[Jun. 2025]** 🥉 Won the **National Bronze Award** in the China Graduate AI Innovation Competition.
-* **[Sep. 2023]** 🏆 Awarded the **Zhejiang Provincial Government Scholarship**.
+* **[2025.08]** 🥇 获得第二十届中国研究生电子设计竞赛 **全国一等奖 (National Gold Award)**。
+* **[2025.07]** 🥉 获得中国研究生机器人创新设计大赛 **全国三等奖 (National Bronze Award)**。
+* **[2025.06]** 🥉 获得中国研究生人工智能创新大赛 **全国三等奖 (National Bronze Award)**。
+* **[2023.09]** 🏆 获得 **浙江省政府奖学金**。
 
-📝 Selected Publications & Patents
+📝 精选论文与专利
 ======
-*(For a full list, please refer to my [CV](/cv-cn/) or [Publications](/publications/) page.)*
+*(完整列表请参阅我的 [简历](/resume-zh/) 或 [论文列表](/publications/) 页面。)*
 
-* **[Patent]** Method for Object Search by Mobile Manipulator in Occluded Environment Based on Association Probability. (**Authorized**, CN116664537B)
-* **[Patent]** Identification and Segmentation of Infrared Insulators and Steel Caps in Complex Environments. (**Authorized**, CN114842367B)
+* **[专利]** 基于关联概率的遮挡环境下移动机械臂物体搜索方法 (**已授权**, CN116664537B)
+* **[专利]** 复杂环境下红外绝缘子及钢帽的识别与分割 (**已授权**, CN114842367B)
 
-🎓 Education
+🎓 教育经历
 ======
-* **M.S. in Control Engineering**, Hangzhou Dianzi University (HDU), 2025 - Present.
-* **B.S. in Automation**, Hangzhou Dianzi University (HDU), 2021 - 2025.
-* **B.S. in Automation**, ITMO University (St. Petersburg, Russia), 2021 - 2025.
+* **控制工程 (硕士)**，杭州电子科技大学 (HDU)，2025 - 至今。
+* **自动化 (学士)**，杭州电子科技大学 (HDU)，2021 - 2025。
+* **自动化 (学士)**，圣彼得堡国立信息技术、机械与光学大学 (ITMO University)，2021 - 2025。
 
 ---
 <div style="font-size: 0.8em; color: #666;">
-  Last updated: Feb. 2026
+  最后更新：2026年2月
 </div>
