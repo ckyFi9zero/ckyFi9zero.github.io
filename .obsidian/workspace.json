@@ -25,14 +25,14 @@
             "id": "2a5eace3a4fe479b",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "index.html.md",
-                "bFile": "index.html.md",
-                "aRef": ""
+                "file": "_pages/about.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: index.html  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "about"
             }
           }
         ],
@@ -221,8 +221,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5eb0469ea11e81fc",
+  "active": "2a5eace3a4fe479b",
   "lastOpenFiles": [
+    "index.md",
     "scripts/update_cv_json.sh",
     "scripts/cv_markdown_to_json.py",
     "scripts",
@@ -234,7 +235,6 @@
     "markdown_generator/pubsFromBib.py",
     "markdown_generator/PubsFromBib.ipynb",
     "markdown_generator/publications.py",
-    "markdown_generator/publications.ipynb",
     "images/themes/homepage-light.png",
     "images/themes/homepage-dark.png",
     "images/themes/homepage-air-light.png",
