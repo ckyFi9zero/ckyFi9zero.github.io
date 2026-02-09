@@ -26,9 +26,9 @@ author:
   avatar           : "profile.jpg"
   name             : "Chen Kuangyi(陈旷镒)"
   pronouns         : # example: "she/her"  
-  bio              : "Master"
+  bio              : "Master Student at <a href='https://hdu-raslab.github.io/'>HDU RAS Lab</a>"
   location         : "Hangzhou, zhejiang"
-  employer         : "Hangzhou Dianzi University"
+  employer         : "HDU RAS Lab"
   uri              : # URL
   email            : "fi9zero@outlook.com" 
 
