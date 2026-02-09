@@ -11,6 +11,12 @@ main:
   - title: "Publications"
     url: /publications/
 
+  - title: "简历"
+    url: /resume-zh/ 
+
+  - title: "Resume"
+    url: /cv/
+
   - title: "Talks"
     url: /talks/    
 
@@ -22,9 +28,6 @@ main:
         
   - title: "Blog Posts"
     url: /year-archive/
-    
-  - title: "CV"
-    url: /cv/
     
   # - title: "CV"
   #   url: /cv-json/

@@ -221,8 +221,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2a5eace3a4fe479b",
+  "active": "5b6246a415e0c040",
   "lastOpenFiles": [
+    "_pages/resume-zh.md",
+    "_pages/cv copy.md",
     "_pages/about.md",
     "index.md",
     "scripts/update_cv_json.sh",
@@ -267,8 +269,6 @@
     "_teaching/2015-spring-teaching-2.md",
     "_teaching/2014-spring-teaching-1.md",
     "_pages/terms.md",
-    "_pages/sitemap.md",
-    "_pages/non-menu-page.md",
     "让我们开始吧/Flowchart.canvas"
   ]
 }
