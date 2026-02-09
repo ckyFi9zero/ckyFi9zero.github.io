@@ -21,14 +21,14 @@ author_profile: true
 教育经历
 ======
 * **硕士**, 杭州电子科技大学, 控制工程, 2025 - 至今
-  * *实验室: **[RAS Lab (Robot Autonomous Systems)](https://hdu-raslab.github.io/)***
-  * *导师: 张波涛*
+  * *实验室: **[RAS Lab (Robotics and Autonomous Systems Lab)](https://hdu-raslab.github.io/)***
+  * *导师: **[张波涛](https://faculty.hdu.edu.cn/zdhxy/zbt/main.htm)***
 * **学士**, 杭州电子科技大学, 自动化, 2021 - 2025
   * *荣誉: 杭州电子科技大学优秀毕业生 (2025)*
-  * *导师: 张波涛*
+  * *导师: **[张波涛](https://faculty.hdu.edu.cn/zdhxy/zbt/main.htm)***
 * **学士**, 圣彼得堡国立信息技术、机械与光学大学 (ITMO), 自动化, 2021 - 2025
   * *中俄合作办学双学位项目*
-  * *导师: *
+  * *导师: **[Sergei V. Shavetov](https://scholar.google.com/citations?user=jV1_djgAAAAJ)***
 
 荣誉与奖励
 ======
