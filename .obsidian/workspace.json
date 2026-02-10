@@ -211,6 +211,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "yolo:打开聊天": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
