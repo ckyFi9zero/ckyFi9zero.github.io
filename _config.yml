@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "dirt" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "air" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Kuangyi Chen(陈旷镒)"
 title_separator          : "-"
 name                     : &name "Chen Kuangyi"
@@ -24,7 +24,7 @@ repository               : "ckyFi9zero/ckyFi9zero.github.io"
 author:
   # Biographic information
   avatar           : "profile.jpg"
-  name             : "Chen Kuangyi(陈旷镒)"
+  name             : "Kuangyi Chen(陈旷镒)"
   pronouns         : # example: "she/her"  
   bio              : "Master Student at <a href='https://hdu-raslab.github.io/'>HDU RAS Lab</a>"
   location         : "Hangzhou, zhejiang"
