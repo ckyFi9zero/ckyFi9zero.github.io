@@ -28,7 +28,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "Master Student at <a href='https://hdu-raslab.github.io/'>HDU RAS Lab</a>"
   location         : "Hangzhou, zhejiang"
-  employer         : "HDU RAS Lab"
+  employer         : # "HDU RAS Lab"
   uri              : # URL
   email            : "fi9zero@outlook.com" 
 
