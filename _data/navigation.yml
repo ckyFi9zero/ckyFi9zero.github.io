@@ -11,8 +11,8 @@ main:
   # - title: "Publications"
   #   url: /publications/
 
-  - title: "简历"
-    url: /resume-zh/ 
+  # - title: "简历"
+  #   url: /resume-zh/ 
 
   # - title: "Resume"
   #   url: /cv/
