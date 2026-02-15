@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "个人简历"
-excerpt: "RESUME"
+excerpt: "CV"
 author_profile: true
 redirect_from: 
   - /about/
