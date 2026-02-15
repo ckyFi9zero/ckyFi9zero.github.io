@@ -1,14 +1,14 @@
 ---
 permalink: /
-title: "关于我"
-excerpt: "About me"
+title: "关于本站"
+excerpt: "About This Website"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-不知道您是怎么发现这里的但是相遇即是缘
+不知道佬是怎么发现这里的但是相遇即是缘
 
 这里是一个学徒的日常踩坑碎碎念
 
