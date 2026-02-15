@@ -18,7 +18,7 @@ url                      : https://ckyFi9zero.github.io # The base hostname & pr
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ckyFi9zero/ckyFi9zero.github.io"
 
-rol what appear as part of the author content on the side# Site Author - The following cont bar.
+# rol what appear as part of the author content on the side# Site Author - The following cont bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
