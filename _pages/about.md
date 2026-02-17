@@ -12,13 +12,14 @@ redirect_from:
 
 <div style="font-size: 1.1em; line-height: 1.6; margin-bottom: 20px;">
   目前于杭州电子科技大学自动化学院攻读硕士学位。<br>
-  致力于解决机器人在极端恶劣天气条件下的感知难题，结合深度学习与传统几何方法，提升移动机器人的鲁棒性。
+  研究聚焦于<b>非结构化环境下的机器人鲁棒感知 (Robust Perception)</b>。
+  致力于通过结合<b>深度学习</b>与<b>几何约束</b>方法，解决激光雷达与视觉传感器在极端气象（雨、雾、雪、沙尘）下的<b>数据退化</b>问题，提升移动机器人的全天候环境适应能力。
 </div>
 
 研究方向
 ======
-* **极端环境感知 (Adverse Weather Perception)**: 
-  * 针对雨、雾、雪、沙尘环境的过滤与抗扰算法
+* **全天候环境下的鲁棒感知 (Robust Perception in Adverse Weather)**: 
+  * **多模态传感器去噪**: 针对激光雷达 (LiDAR) 与视觉 (Vision) 在雨、雾、雪、沙尘环境下的退化复原 (Restoration) 与抗扰算法 (Noise Mitigation) 研究。
 
 教育经历
 ======
