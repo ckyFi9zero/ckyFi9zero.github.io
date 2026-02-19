@@ -41,3 +41,17 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+/* ===== 修复作者侧栏图标视觉不对齐问题 ===== */
+
+.author__urls.social-icons li > a,
+.author__urls.social-icons li.author__desktop {
+  display: flex;
+  align-items: center;
+}
+
+.author__urls.social-icons li > a > i,
+.author__urls.social-icons li.author__desktop > i {
+  flex: 0 0 1.8em;   /* 图标列固定宽度 */
+  display: inline-flex;
+  justify-content: center;
+  align-items
