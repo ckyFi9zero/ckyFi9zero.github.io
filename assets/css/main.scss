@@ -54,4 +54,11 @@
   flex: 0 0 1.8em;   /* 图标列固定宽度 */
   display: inline-flex;
   justify-content: center;
-  align-items
+.author__urls.social-icons li > a > i,
+.author__urls.social-icons li.author__desktop > i {
+  flex: 0 0 1.8em;   /* 图标列固定宽度 */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
