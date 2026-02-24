@@ -102,35 +102,6 @@ $(document).ready(function () {
   // Enable the theme toggle
   $('#theme-toggle').on('click', toggleTheme);
 
-
-  /* ========================================================================== 
-    Language toggle (About page only)
-    ========================================================================== */
-
-  $('#lang-toggle').on('click', function (e) {
-    e.preventDefault();
-
-    const current = localStorage.getItem("lang") || "zh";
-    const newLang = current === "zh" ? "en" : "zh";
-
-    localStorage.setItem("lang", newLang);
-    applyLanguage(newLang);
-  });
-
-  function applyLanguage(lang) {
-    if (lang === "en") {
-      $(".lang-zh").hide();
-      $(".lang-en").show();
-    } else {
-      $(".lang-zh").show();
-      $(".lang-en").hide();
-    }
-  }
-
-  // 页面加载时恢复语言
-  applyLanguage(localStorage.getItem("lang") || "zh");
-
-
   // Enable the sticky footer
   var bumpIt = function () {
     $("body").css("padding-bottom", "0");
