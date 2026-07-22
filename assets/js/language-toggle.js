@@ -21,7 +21,7 @@
     return;
   }
 
-  var BUTTON = toggleButton.querySelector("button");
+  var BUTTON = toggleButton.querySelector(".language-toggle__button");
 
   // Page titles shown in the browser tab for each language.
   var PAGE_TITLES = {
@@ -82,6 +82,14 @@
   }
 
   BUTTON.addEventListener("click", toggleLanguage);
+
+  // Keyboard support: <a role="button"> without href needs manual activation.
+  BUTTON.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleLanguage();
+    }
+  });
 
   // Apply the saved (or default) language on load.
   setLanguage(getLanguage());

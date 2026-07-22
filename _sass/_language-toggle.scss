@@ -1,11 +1,6 @@
 .greedy-nav .language-toggle__button {
   display: inline-flex;
   align-items: center;
-  position: static;
-  right: auto;
-  height: auto;
-  z-index: auto;
-  outline: none;
   gap: 0.35rem;
   padding: 0;
   border: 0;
@@ -13,6 +8,7 @@
   color: inherit;
   font: inherit;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .greedy-nav .language-toggle__button:focus-visible {
