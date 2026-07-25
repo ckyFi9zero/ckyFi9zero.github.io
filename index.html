@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (() => {
+      const saved = localStorage.getItem("theme");
+      const theme = saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <title>陈旷镒｜机器人鲁棒感知研究者</title>
+  <meta name="description" content="陈旷镒，杭州电子科技大学控制工程硕士生，研究机器人在恶劣天气与非结构化环境下的鲁棒感知。">
+  <link rel="canonical" href="https://ckyfi9zero.github.io/">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://ckyfi9zero.github.io/">
+  <meta property="og:title" content="陈旷镒｜机器人鲁棒感知研究者">
+  <meta property="og:description" content="机器人鲁棒感知、恶劣天气感知与多模态传感研究。">
+  <meta property="og:image" content="https://ckyfi9zero.github.io/assets/images/profile.webp">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kuangyi Chen",
+    "alternateName": "陈旷镒",
+    "url": "https://ckyfi9zero.github.io/",
+    "image": "https://ckyfi9zero.github.io/assets/images/profile.webp",
+    "email": "mailto:kuangyi_chen@hdu.edu.cn",
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "Hangzhou Dianzi University"},
+    "sameAs": ["https://github.com/ckyFi9zero", "https://www.zhihu.com/people/Fi9zero", "https://blog.csdn.net/Fi9zero"]
+  }
+  </script>
+</head>
+<body>
+  <!-- Accessibility: keyboard users can bypass the persistent navigation. -->
+  <a class="skip-link" href="#main"><span data-lang="zh">跳到主要内容</span><span data-lang="en">Skip to content</span></a>
+  <!-- Primary navigation, language switcher, and color-theme control. -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="主导航">
+      <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only" data-lang="zh">打开菜单</span><span class="sr-only" data-lang="en">Open menu</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about"><span data-lang="zh">关于</span><span data-lang="en">About</span></a>
+        <a href="#research"><span data-lang="zh">研究</span><span data-lang="en">Research</span></a>
+        <a href="#experience"><span data-lang="zh">经历</span><span data-lang="en">Experience</span></a>
+        <a href="#honors"><span data-lang="zh">荣誉</span><span data-lang="en">Honors</span></a>
+        <a href="#ip"><span data-lang="zh">知识产权</span><span data-lang="en">IP</span></a>
+      </div>
+      <div class="nav-actions">
+        <button class="text-button language-toggle" type="button" aria-label="Switch language">EN</button>
+        <button class="icon-button theme-toggle" type="button" aria-label="切换深浅主题">
+          <svg class="sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.5 8.5 0 1 0 20.2 15.5Z"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero: Tairan He-inspired academic introduction layout. -->
+    <section class="hero section" id="about">
+      <div class="container intro-shell">
+        <header class="intro-heading">
+          <p class="eyebrow"><span data-lang="zh">机器人感知 · 自主系统</span><span data-lang="en">ROBOT PERCEPTION · AUTONOMOUS SYSTEMS</span></p>
+          <h1><span data-lang="zh">陈旷镒</span><span data-lang="en">Kuangyi Chen</span></h1>
+        </header>
+        <div class="intro-grid">
+          <aside class="intro-profile" aria-label="Profile and contact links">
+            <div class="portrait-wrap">
+              <div class="scan-grid" aria-hidden="true"></div>
+              <div class="portrait-frame"><img class="portrait" src="/assets/images/profile.webp" width="600" height="600" alt="陈旷镒的个人头像"></div>
+              <span class="status"><span class="status-dot"></span><span data-lang="zh">开放科研交流</span><span data-lang="en">Open to research conversations</span></span>
+            </div>
+            <nav class="intro-links" aria-label="Profile links">
+              <button class="intro-link print-button" type="button"><span data-lang="zh">简历</span><span data-lang="en">CV</span></button>
+              <a class="intro-link" href="mailto:kuangyi_chen%40hdu.edu.cn">Email</a>
+              <a class="intro-link" href="https://github.com/ckyFi9zero" target="_blank" rel="me noopener">GitHub</a>
+              <a class="intro-link" href="https://hdu-raslab.github.io/" target="_blank" rel="noopener">RAS Lab</a>
+              <a class="intro-link" href="https://www.zhihu.com/people/Fi9zero" target="_blank" rel="me noopener"><span data-lang="zh">知乎</span><span data-lang="en">Zhihu</span></a>
+              <a class="intro-link" href="https://blog.csdn.net/Fi9zero" target="_blank" rel="me noopener">CSDN</a>
+              <button class="intro-link intro-wechat-button" type="button"><span data-lang="zh">微信</span><span data-lang="en">WeChat</span></button>
+            </nav>
+          </aside>
+          <div class="intro-body" id="research">
+            <p class="intro-lead"><span data-lang="zh">我是杭州电子科技大学自动化学院控制工程硕士生，现于 <a href="https://hdu-raslab.github.io/" target="_blank" rel="noopener">RAS Lab</a> 开展机器人鲁棒感知研究。</span><span data-lang="en">I am an M.Eng. student in Control Engineering at Hangzhou Dianzi University, working on robust robot perception at the <a href="https://hdu-raslab.github.io/" target="_blank" rel="noopener">RAS Lab</a>.</span></p>
+            <p><span data-lang="zh">我关注复杂、非结构化真实环境中的可靠感知，使用深度学习或几何约束方法，缓解雨、雾、雪与沙尘条件下 LiDAR 传感器的数据退化。目前计划在机器人感知与自主系统方向继续攻读博士学位。</span><span data-lang="en">My work focuses on reliable perception in complex, unstructured environments. I use deep learning or geometric-constraint-based methods to mitigate LiDAR degradation in rain, fog, snow, and dust. I plan to pursue a PhD in robot perception and autonomous systems.</span></p>
+            <div class="research-statement">
+              <p><strong><span data-lang="zh">目标：</span><span data-lang="en">Goal: </span></strong><span data-lang="zh">提升机器人在复杂真实环境中的感知可靠性。</span><span data-lang="en">Improve the reliability of robot perception in complex real-world environments.</span></p>
+              <p><strong><span data-lang="zh">研究兴趣：</span><span data-lang="en">Research Interest: </span></strong><span class="research-keywords"><span data-lang="zh">关于机器人的一切</span><span data-lang="en">Everything about robots</span></span></p>
+              <p><strong><span data-lang="zh">研究问题：</span><span data-lang="en">Research Question: </span></strong><span data-lang="zh">如何使用深度学习或几何约束方法，缓解恶劣天气下的传感器数据退化？</span><span data-lang="en">How can deep learning or geometric-constraint-based methods mitigate sensor degradation in adverse weather?</span></p>
+              <p><strong><span data-lang="zh">研究对象：</span><span data-lang="en">Research Objects: </span></strong><span data-lang="zh">LiDAR、三维点云、点云去噪、移动机器人</span><span data-lang="en">LiDAR, 3D Point Clouds, Point Cloud Denoising, Mobile Robots</span></p>
+            </div>
+            <p class="intro-email"><strong>Email:</strong> kuangyi_chen [AT] hdu.edu.cn</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education rows pair each institution mark with its degree details. -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading education-heading"><p class="eyebrow">02 / EXPERIENCE</p><h2><span data-lang="zh">教育经历</span><span data-lang="en">Education</span></h2></div>
+        <div class="education-list">
+          <article class="education-row">
+            <div class="school-logo dual-logo">
+              <img src="/assets/images/hdu-crest.png" width="126" height="126" loading="lazy" alt="杭州电子科技大学校徽">
+              <span class="logo-divider" aria-hidden="true"></span>
+              <img src="/assets/images/ras-logo.png" width="720" height="720" loading="lazy" alt="RAS 机器人与自主系统实验室标识">
+            </div>
+            <div class="education-detail"><ul><li><span class="education-period">2025 — <span data-lang="zh">至今</span><span data-lang="en">Present</span></span>，<span data-lang="zh">控制工程硕士，<a href="https://www.hdu.edu.cn/" target="_blank" rel="noopener">杭州电子科技大学</a>，<a href="https://hdu-raslab.github.io/" target="_blank" rel="noopener">RAS Lab</a>，中国杭州，导师：<a href="https://faculty.hdu.edu.cn/zdhxy/zbt/main.htm" target="_blank" rel="noopener">张波涛</a>。</span><span data-lang="en">M.Eng. in Control Engineering, <a href="https://www.hdu.edu.cn/" target="_blank" rel="noopener">Hangzhou Dianzi University</a>, <a href="https://hdu-raslab.github.io/" target="_blank" rel="noopener">RAS Lab</a>, Hangzhou, China. Advisor: <a href="https://faculty.hdu.edu.cn/zdhxy/zbt/main.htm" target="_blank" rel="noopener">Botao Zhang</a>.</span></li></ul></div>
+          </article>
+          <article class="education-row">
+            <div class="school-logo"><img src="/assets/images/itmo-logo.png" width="420" height="176" loading="lazy" alt="ITMO University logo"></div>
+            <div class="education-detail"><ul><li><span class="education-period">2021 — 2025</span>，<span data-lang="zh">自动化工学学士，<a href="https://en.itmo.ru/" target="_blank" rel="noopener">ITMO University</a>，俄罗斯圣彼得堡，中俄合作办学双学位项目，导师：<a href="https://scholar.google.com/citations?user=jV1_djgAAAAJ" target="_blank" rel="noopener">Sergei V. Shavetov</a>。</span><span data-lang="en">B.Eng. in Automation, <a href="https://en.itmo.ru/" target="_blank" rel="noopener">ITMO University</a>, Saint Petersburg, Russia. Sino-Russian Joint Dual-Degree Program. Advisor: <a href="https://scholar.google.com/citations?user=jV1_djgAAAAJ" target="_blank" rel="noopener">Sergei V. Shavetov</a>.</span></li></ul></div>
+          </article>
+          <article class="education-row">
+            <div class="school-logo"><img src="/assets/images/hdu-logo.webp" width="520" height="126" loading="lazy" alt="杭州电子科技大学标识"></div>
+            <div class="education-detail"><ul><li><span class="education-period">2021 — 2025</span>，<span data-lang="zh">自动化工学学士，<a href="https://www.hdu.edu.cn/" target="_blank" rel="noopener">杭州电子科技大学</a>，中国杭州，2025 年优秀毕业生，导师：<a href="https://faculty.hdu.edu.cn/zdhxy/zbt/main.htm" target="_blank" rel="noopener">张波涛</a>、<a href="https://faculty.hdu.edu.cn/sgjlhxy/wj2/main.htm" target="_blank" rel="noopener">王坚</a>。</span><span data-lang="en">B.Eng. in Automation, <a href="https://www.hdu.edu.cn/" target="_blank" rel="noopener">Hangzhou Dianzi University</a>, Hangzhou, China. Outstanding Graduate (2025). Advisors: <a href="https://faculty.hdu.edu.cn/zdhxy/zbt/main.htm" target="_blank" rel="noopener">Botao Zhang</a> and <a href="https://faculty.hdu.edu.cn/sgjlhxy/wj2/main.htm" target="_blank" rel="noopener">Jian Wang</a>.</span></li></ul></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent milestones; older entries are progressively disclosed by JavaScript. -->
+    <section class="section" id="news">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">03 / UPDATES</p><h2><span data-lang="zh">最新动态</span><span data-lang="en">Latest updates</span></h2></div>
+        <ol class="timeline compact">
+          <li><time>2025</time><div><strong><span data-lang="zh">开始攻读控制工程硕士</span><span data-lang="en">Started M.Eng. in Control Engineering</span></strong><p><span data-lang="zh">加入杭州电子科技大学 RAS Lab。</span><span data-lang="en">Joined the RAS Lab at Hangzhou Dianzi University.</span></p></div></li>
+          <li><time>2025</time><div><strong><span data-lang="zh">中国研究生电子设计竞赛金奖</span><span data-lang="en">Gold Award, China Graduate Electronic Design Contest</span></strong><p><span data-lang="zh">国家级</span><span data-lang="en">National level</span></p></div></li>
+          <li><time>2025</time><div><strong><span data-lang="zh">两项研究生创新赛事获铜奖</span><span data-lang="en">Two Bronze Awards in graduate innovation competitions</span></strong><p><span data-lang="zh">机器人创新设计与人工智能创新，国家级。</span><span data-lang="en">Robot Innovation Design and Artificial Intelligence Innovation, national level.</span></p></div></li>
+          <li class="more-update" hidden><time>2023</time><div><strong><span data-lang="zh">获得浙江省政府奖学金</span><span data-lang="en">Received Zhejiang Provincial Government Scholarship</span></strong></div></li>
+          <li class="more-update" hidden><time>2022</time><div><strong><span data-lang="zh">“互联网+”大学生创新创业大赛银奖</span><span data-lang="en">Silver Award, China International “Internet+” Competition</span></strong><p><span data-lang="zh">国家级</span><span data-lang="en">National level</span></p></div></li>
+        </ol>
+        <button class="link-button updates-toggle" type="button" aria-expanded="false"><span data-lang="zh">展开全部动态 ↓</span><span data-lang="en">Show all updates ↓</span></button>
+      </div>
+    </section>
+
+    <!-- Primary awards with an optional secondary-award disclosure. -->
+    <section class="section" id="honors">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">04 / HONORS</p><h2><span data-lang="zh">荣誉与奖励</span><span data-lang="en">Honors & awards</span></h2></div>
+        <div class="honors-grid">
+          <article><span class="award-level"><span data-lang="zh">国家级 · 金奖</span><span data-lang="en">National · Gold</span></span><time>2025</time><h3><span data-lang="zh">中国研究生电子设计竞赛</span><span data-lang="en">China Graduate Electronic Design Contest</span></h3></article>
+          <article><span class="award-level"><span data-lang="zh">国家级 · 银奖</span><span data-lang="en">National · Silver</span></span><time>2022</time><h3><span data-lang="zh">“互联网+”大学生创新创业大赛</span><span data-lang="en">China International “Internet+” Competition</span></h3></article>
+          <article><span class="award-level"><span data-lang="zh">国家级 · 铜奖</span><span data-lang="en">National · Bronze</span></span><time>2025</time><h3><span data-lang="zh">中国研究生机器人创新设计大赛</span><span data-lang="en">China Graduate Robot Innovation Design Competition</span></h3></article>
+          <article><span class="award-level"><span data-lang="zh">国家级 · 铜奖</span><span data-lang="en">National · Bronze</span></span><time>2025</time><h3><span data-lang="zh">中国研究生人工智能创新大赛</span><span data-lang="en">China Graduate AI Innovation Competition</span></h3></article>
+          <article><span class="award-level"><span data-lang="zh">省级奖学金</span><span data-lang="en">Provincial scholarship</span></span><time>2023</time><h3><span data-lang="zh">浙江省政府奖学金</span><span data-lang="en">Zhejiang Provincial Government Scholarship</span></h3></article>
+          <article class="secondary-award" hidden><span class="award-level"><span data-lang="zh">省级 · 铜奖</span><span data-lang="en">Provincial · Bronze</span></span><time>2022</time><h3><span data-lang="zh">“互联网+”大学生创新创业大赛（浙江省赛）</span><span data-lang="en">“Internet+” Competition, Zhejiang Province</span></h3></article>
+        </div>
+        <button class="link-button honors-toggle" type="button" aria-expanded="false"><span data-lang="zh">查看次要奖项 ↓</span><span data-lang="en">Show additional award ↓</span></button>
+      </div>
+    </section>
+
+    <!-- Patents and software copyrights, grouped by record type. -->
+    <section class="section" id="ip">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">05 / INTELLECTUAL PROPERTY</p><h2><span data-lang="zh">知识产权</span><span data-lang="en">Intellectual property</span></h2></div>
+        <div class="ip-columns">
+          <div><h3 class="column-title">Patents <span>03</span></h3>
+            <article class="ip-card"><span class="status-tag granted"><span data-lang="zh">已授权</span><span data-lang="en">Granted</span></span><h4><span data-lang="zh">一种基于关联概率的遮挡环境下移动机械臂物体搜索方法</span><span data-lang="en">Object search for a mobile manipulator under occlusion based on association probability</span></h4><p>CN116664537B · <span data-lang="zh">排名 3/5</span><span data-lang="en">Rank 3/5</span></p><a href="https://pss-system.cponline.cnipa.gov.cn/" target="_blank" rel="noopener"><span data-lang="zh">国家知识产权局查询 ↗</span><span data-lang="en">CNIPA search ↗</span></a></article>
+            <article class="ip-card"><span class="status-tag granted"><span data-lang="zh">已授权</span><span data-lang="en">Granted</span></span><h4><span data-lang="zh">一种复杂环境下的红外绝缘子与钢帽的识别与分割方法</span><span data-lang="en">Recognition and segmentation of infrared insulators and steel caps in complex environments</span></h4><p>CN114842367B · <span data-lang="zh">排名 7/7</span><span data-lang="en">Rank 7/7</span></p><a href="https://pss-system.cponline.cnipa.gov.cn/" target="_blank" rel="noopener"><span data-lang="zh">国家知识产权局查询 ↗</span><span data-lang="en">CNIPA search ↗</span></a></article>
+            <article class="ip-card"><span class="status-tag"><span data-lang="zh">已公开</span><span data-lang="en">Published</span></span><h4><span data-lang="zh">一种适应于树林环境下的树干喷涂机器人的控制方法</span><span data-lang="en">Control method for a tree-trunk spraying robot in forest environments</span></h4><p>CN117109555A · <span data-lang="zh">排名 4/11</span><span data-lang="en">Rank 4/11</span></p><a href="https://pss-system.cponline.cnipa.gov.cn/" target="_blank" rel="noopener"><span data-lang="zh">国家知识产权局查询 ↗</span><span data-lang="en">CNIPA search ↗</span></a></article>
+          </div>
+          <div><h3 class="column-title">Software Copyrights <span>02</span></h3>
+            <article class="ip-card"><span class="status-tag granted"><span data-lang="zh">已登记</span><span data-lang="en">Registered</span></span><h4><span data-lang="zh">基于去雾抗扰的车道自动识别系统</span><span data-lang="en">Dehazing-based automatic lane recognition system</span></h4><p>2023SR0061095 · <span data-lang="zh">排名 1/7</span><span data-lang="en">Rank 1/7</span></p></article>
+            <article class="ip-card"><span class="status-tag granted"><span data-lang="zh">已登记</span><span data-lang="en">Registered</span></span><h4><span data-lang="zh">雾天车辆检测软件</span><span data-lang="en">Foggy-weather vehicle detection software</span></h4><p>2023SR0898877 · <span data-lang="zh">排名 2/4</span><span data-lang="en">Rank 2/4</span></p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Minimal site footer. -->
+  <footer><div class="container"><span>© 2026 Kuangyi Chen</span><span><span data-lang="zh">机器人学徒的个人主页</span><span data-lang="en">A robot apprentice’s homepage</span></span></div></footer>
+
+  <!-- Native dialog provides keyboard focus management for the QR code. -->
+  <dialog class="wechat-dialog">
+    <button class="dialog-close" type="button" aria-label="Close">×</button>
+    <h2>WeChat</h2>
+    <img src="/assets/images/wechat-qr.webp" width="720" height="706" loading="lazy" alt="陈旷镒的微信二维码">
+    <p>Fi9zero0715</p>
+  </dialog>
+
+  <noscript><style>[data-lang="en"]{display:none!important}</style></noscript>
+  <script src="/assets/js/i18n.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
