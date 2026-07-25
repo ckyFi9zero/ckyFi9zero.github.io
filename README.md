@@ -1,16 +1,23 @@
-# Kuangyi Chen's Academic Homepage
+# Kuangyi Chen — Personal Homepage
 
-This repository hosts the source code for my personal academic website.
+Static, bilingual personal résumé focused on robot perception research.
 
-👉 **Live Site:** [https://ckyFi9zero.github.io](https://ckyFi9zero.github.io)
+**Live:** [ckyFi9zero.github.io](https://ckyFi9zero.github.io)
 
----
+## Structure
 
-### 📌 About
-It serves as my online **CV**, featuring:
-- Education & Biography
-- Research Interests
-- Publications & Patents
+- `index.html` — semantic, SEO-readable page content
+- `assets/css/style.css` — responsive light/dark visual system
+- `assets/js/i18n.js` — language state and localized metadata
+- `assets/js/main.js` — theme, navigation, disclosure, and dialog interactions
+- `data/` — reusable Chinese and English profile data
 
-**Built with:** Jekyll & GitHub Pages.
- 
+No framework, dependency, or build step is required.
+
+## Local preview
+
+```sh
+python3 -m http.server 4173
+```
+
+Then open `http://127.0.0.1:4173/`.

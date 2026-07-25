@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ckyfi9zero.github.io/sitemap.xml
