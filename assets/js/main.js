@@ -28,22 +28,6 @@
     }
   });
 
-  // Reusable disclosure behavior powers both updates and secondary awards.
-  const bindDisclosure = (buttonSelector, itemSelector) => {
-    const button = document.querySelector(buttonSelector);
-    const items = document.querySelectorAll(itemSelector);
-    button.addEventListener("click", () => {
-      const expanded = button.getAttribute("aria-expanded") === "true";
-      items.forEach((item) => { item.hidden = expanded; });
-      button.setAttribute("aria-expanded", String(!expanded));
-      const labels = button.querySelectorAll("[data-lang]");
-      labels[0].textContent = expanded ? (buttonSelector.includes("updates") ? "展开全部动态 ↓" : "查看次要奖项 ↓") : "收起 ↑";
-      labels[1].textContent = expanded ? (buttonSelector.includes("updates") ? "Show all updates ↓" : "Show additional award ↓") : "Show less ↑";
-    });
-  };
-  bindDisclosure(".updates-toggle", ".more-update");
-  bindDisclosure(".honors-toggle", ".secondary-award");
-
   document.querySelector(".print-button").addEventListener("click", () => window.print());
 
   // Reveal education entries once; reduced-motion users receive static content.
