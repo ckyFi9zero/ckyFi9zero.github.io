@@ -70,3 +70,66 @@
   }, { rootMargin: "-35% 0px -55% 0px" });
   sections.forEach((section) => sectionObserver.observe(section));
 })();
+
+(() => {
+  // Top-of-viewport reading-progress indicator.
+  const progress = document.querySelector(".scroll-progress");
+  if (progress) {
+    const update = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + "%";
+    };
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  }
+
+  // Sparse LiDAR-style point-cloud background; honours reduced-motion.
+  const canvas = document.querySelector(".point-cloud");
+  if (!canvas || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const ctx = canvas.getContext("2d");
+  const root = document.documentElement;
+  const readAccent = () => getComputedStyle(root).getPropertyValue("--accent").trim() || "#7896ff";
+  let color = readAccent();
+  new MutationObserver(() => { color = readAccent(); })
+    .observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+
+  let dots = [];
+  let w = 0, h = 0;
+  const resize = () => {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = canvas.width = Math.round(window.innerWidth * dpr);
+    h = canvas.height = Math.round(window.innerHeight * dpr);
+    canvas.style.width = window.innerWidth + "px";
+    canvas.style.height = window.innerHeight + "px";
+    const count = Math.min(150, Math.max(60, Math.round((window.innerWidth * window.innerHeight) / 16000)));
+    dots = Array.from({ length: count }, () => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      r: (Math.random() * 1.7 + 0.5) * dpr,
+      vx: (Math.random() - 0.5) * 0.12 * dpr,
+      vy: (Math.random() - 0.5) * 0.12 * dpr,
+      a: Math.random() * 0.26 + 0.06
+    }));
+  };
+  resize();
+  window.addEventListener("resize", resize);
+
+  const tick = () => {
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = color;
+    for (const d of dots) {
+      d.x += d.vx;
+      d.y += d.vy;
+      if (d.x < 0) d.x = w; else if (d.x > w) d.x = 0;
+      if (d.y < 0) d.y = h; else if (d.y > h) d.y = 0;
+      ctx.globalAlpha = d.a;
+      ctx.beginPath();
+      ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+})();

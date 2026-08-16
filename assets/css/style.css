@@ -198,3 +198,49 @@
 .honors-scroll{max-height:372px}
 .honors-scroll .honors-grid{padding-bottom:2px}
 @media(prefers-reduced-motion:reduce){.record-empty{transition:none}.record-empty:hover{transform:none}}
+
+/* ==========================================================================
+   Visual upgrade: point-cloud canvas, reading progress, gradient accents
+   ========================================================================== */
+
+/* Soft ambient glows in the page corners, tinted by the accent palette. */
+body{
+  background-image:
+    radial-gradient(1100px 620px at 88% -8%, color-mix(in srgb,var(--accent) 8%,transparent), transparent 62%),
+    radial-gradient(900px 540px at -6% 24%, color-mix(in srgb,var(--accent-2) 7%,transparent), transparent 58%);
+}
+
+/* Fixed LiDAR-style particle field: above the page tint, below all content. */
+.point-cloud{position:fixed;inset:0;z-index:0;width:100%;height:100%;pointer-events:none}
+main,footer{position:relative;z-index:1}
+
+/* Top-of-viewport reading-progress bar. */
+.scroll-progress{position:fixed;top:0;left:0;z-index:80;height:3px;width:0;border-radius:0 2px 2px 0;background:linear-gradient(90deg,var(--accent),var(--accent-2));pointer-events:none}
+
+/* Gradient emphasis on small uppercase labels. */
+.eyebrow,.reading-kicker,.award-level{
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+}
+
+/* Elegant serif for the English display name only; Chinese stays sans. */
+.intro-heading h1 [data-lang="en"],.hero h1 [data-lang="en"]{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:480;
+  letter-spacing:-.02em;
+}
+
+/* Research-interest phrase becomes a soft accent pill. */
+.research-keywords{
+  display:inline-block;
+  padding:2px 13px;
+  border:1px solid color-mix(in srgb,var(--accent) 32%,transparent);
+  border-radius:999px;
+  background:color-mix(in srgb,var(--accent) 9%,transparent);
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:620;
+}
