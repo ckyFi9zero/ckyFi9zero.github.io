@@ -6,7 +6,7 @@
   <script>
     (() => {
       const saved = localStorage.getItem("theme");
-      const theme = saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      const theme = saved || "light";
       document.documentElement.dataset.theme = theme;
     })();
   </script>
@@ -37,8 +37,6 @@
   </script>
 </head>
 <body>
-  <canvas class="point-cloud" aria-hidden="true"></canvas>
-  <div class="scroll-progress" aria-hidden="true"></div>
   <!-- Accessibility: keyboard users can bypass the persistent navigation. -->
   <a class="skip-link" href="#main"><span data-lang="zh">跳到主要内容</span><span data-lang="en">Skip to content</span></a>
   <!-- Primary navigation, language switcher, and color-theme control. -->
@@ -54,34 +52,26 @@
         <a href="#experience"><span data-lang="zh">经历</span><span data-lang="en">Experience</span></a>
         <a href="#academic"><span data-lang="zh">学术</span><span data-lang="en">Academic</span></a>
         <a href="#projects"><span data-lang="zh">项目</span><span data-lang="en">Projects</span></a>
-        <a href="#reading"><span data-lang="zh">书籍</span><span data-lang="en">Books</span></a>
+        <a href="#news"><span data-lang="zh">动态</span><span data-lang="en">Updates</span></a>
         <a href="#honors"><span data-lang="zh">荣誉</span><span data-lang="en">Honors</span></a>
         <a href="#ip"><span data-lang="zh">知识产权</span><span data-lang="en">IP</span></a>
-      </div>
-      <div class="nav-actions">
-        <button class="text-button language-toggle" type="button" aria-label="Switch language">EN</button>
-        <button class="icon-button theme-toggle" type="button" aria-label="切换深浅主题">
-          <svg class="sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
-          <svg class="moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.5 8.5 0 1 0 20.2 15.5Z"/></svg>
-        </button>
+        <a href="#reading"><span data-lang="zh">书籍</span><span data-lang="en">Books</span></a>
       </div>
     </nav>
   </header>
 
   <main id="main">
-    <!-- Hero: Tairan He-inspired academic introduction layout. -->
-    <section class="hero section" id="about">
-      <div class="container intro-shell">
-        <header class="intro-heading">
-          <h1><span data-lang="zh">陈旷镒</span><span data-lang="en">Kuangyi Chen</span></h1>
-        </header>
-        <div class="intro-grid">
-          <aside class="intro-profile" aria-label="Profile and contact links">
+    <div class="page-layout">
+      <aside class="profile-rail" aria-label="个人信息">
+        <div class="profile-rail-inner">
             <div class="portrait-wrap">
               <div class="scan-grid" aria-hidden="true"></div>
               <div class="portrait-frame"><img class="portrait" src="/assets/images/profile.webp" width="600" height="600" alt="陈旷镒的个人头像"></div>
               <span class="status"><span class="status-dot"></span><span data-lang="zh">开放科研交流</span><span data-lang="en">Open to research conversations</span></span>
             </div>
+            <h1 class="profile-name"><span data-lang="zh">陈旷镒</span><span data-lang="en">Kuangyi Chen</span></h1>
+            <p class="profile-role"><span data-lang="zh">控制工程硕士生</span><span data-lang="en">M.Eng. Student in Control Engineering</span></p>
+            <p class="profile-affiliation"><a href="https://www.hdu.edu.cn/" target="_blank" rel="noopener">杭州电子科技大学</a><span aria-hidden="true"> · </span><a href="https://hdu-raslab.github.io/" target="_blank" rel="noopener">RAS Lab</a></p>
             <nav class="intro-links" aria-label="Profile links">
               <button class="intro-link print-button" type="button"><span class="intro-link-label"><span data-lang="zh">简历</span><span data-lang="en">CV</span></span><svg class="intro-link-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></button>
               <a class="intro-link intro-link--primary" href="mailto:kuangyi_chen%40hdu.edu.cn"><span class="intro-link-label"><span data-lang="zh">邮箱</span><span data-lang="en">Email</span></span><svg class="intro-link-icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></a>
@@ -91,21 +81,38 @@
               <a class="intro-link" href="https://blog.csdn.net/Fi9zero" target="_blank" rel="me noopener"><span class="intro-link-label">CSDN</span><span class="intro-link-glyph" aria-hidden="true">C</span></a>
               <button class="intro-link intro-wechat-button" type="button"><span class="intro-link-label"><span data-lang="zh">微信</span><span data-lang="en">WeChat</span></span><svg class="intro-link-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.5c0 3.6-3.6 6.5-8 6.5a9.7 9.7 0 0 1-2.8-.4L5 20l.9-3.2A6 6 0 0 1 4 12c0-3.6 3.6-6.5 8-6.5s8 2.4 8 6Z"/><circle cx="9" cy="11" r=".75"/><circle cx="15" cy="11" r=".75"/></svg></button>
             </nav>
-          </aside>
+            <div class="profile-focus">
+              <p class="profile-label"><span data-lang="zh">研究方向</span><span data-lang="en">Research focus</span></p>
+              <ul class="keyword-list">
+                <li>LiDAR</li><li>3D Point Clouds</li><li>Point Cloud Denoising</li><li>Robust Perception</li><li>Mobile Robots</li>
+              </ul>
+            </div>
+            <div class="profile-controls" aria-label="页面设置">
+              <button class="text-button language-toggle" type="button" aria-label="Switch language">EN</button>
+              <button class="icon-button theme-toggle" type="button" aria-label="切换深浅主题">
+                <svg class="sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+                <svg class="moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.5 8.5 0 1 0 20.2 15.5Z"/></svg>
+              </button>
+            </div>
+        </div>
+      </aside>
+
+      <div class="content-column">
+        <!-- Research profile leads the academic content column. -->
+        <section class="hero section" id="about">
+          <div class="section-heading section-heading--intro"><p class="eyebrow">01 / PROFILE</p><h2><span data-lang="zh">研究简介</span><span data-lang="en">Research profile</span></h2></div>
           <div class="intro-body" id="research">
             <p class="intro-lead"><span data-lang="zh">我是杭州电子科技大学自动化学院控制工程硕士生，现于 <a href="https://hdu-raslab.github.io/" target="_blank" rel="noopener">RAS Lab</a> 开展机器人鲁棒感知研究。</span><span data-lang="en">I am an M.Eng. student in Control Engineering at Hangzhou Dianzi University, working on robust robot perception at the <a href="https://hdu-raslab.github.io/" target="_blank" rel="noopener">RAS Lab</a>.</span></p>
             <p><span data-lang="zh">我关注复杂、非结构化真实环境中的可靠感知，使用深度学习或几何约束方法，缓解雨、雾、雪与沙尘条件下 LiDAR 传感器的数据退化。目前计划在机器人感知与自主系统方向继续攻读博士学位。</span><span data-lang="en">My work focuses on reliable perception in complex, unstructured environments. I use deep learning or geometric-constraint-based methods to mitigate LiDAR degradation in rain, fog, snow, and dust. I plan to pursue a PhD in robot perception and autonomous systems.</span></p>
             <div class="research-statement">
               <p><strong><span data-lang="zh">目标：</span><span data-lang="en">Goal: </span></strong><span data-lang="zh">提升机器人在复杂真实环境中的感知可靠性。</span><span data-lang="en">Improve the reliability of robot perception in complex real-world environments.</span></p>
-              <p><strong><span data-lang="zh">研究兴趣：</span><span data-lang="en">Research Interest: </span></strong><span class="research-keywords"><span data-lang="zh">关于机器人的一切</span><span data-lang="en">Everything about robots</span></span></p>
+              <p><strong><span data-lang="zh">研究兴趣：</span><span data-lang="en">Research Interest: </span></strong><span class="research-keywords"><span data-lang="zh">机器人鲁棒感知与自主系统</span><span data-lang="en">Robust Robot Perception and Autonomous Systems</span></span></p>
               <p><strong><span data-lang="zh">研究问题：</span><span data-lang="en">Research Question: </span></strong><span data-lang="zh">如何使用深度学习或几何约束方法，缓解恶劣天气下的传感器数据退化？</span><span data-lang="en">How can deep learning or geometric-constraint-based methods mitigate sensor degradation in adverse weather?</span></p>
               <p><strong><span data-lang="zh">研究对象：</span><span data-lang="en">Research Objects: </span></strong><span data-lang="zh">LiDAR、三维点云、点云去噪、移动机器人</span><span data-lang="en">LiDAR, 3D Point Clouds, Point Cloud Denoising, Mobile Robots</span></p>
             </div>
             <p class="intro-email"><strong>Email:</strong> kuangyi_chen [AT] hdu.edu.cn</p>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
     <!-- Education rows pair each institution mark with its degree details. -->
     <section class="section" id="experience">
@@ -207,10 +214,47 @@
       </div>
     </section>
 
+    <!-- Awards remain fully available inside a compact scrollable record area. -->
+    <section class="section" id="honors">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">06 / HONORS</p><h2><span data-lang="zh">荣誉与奖励</span><span data-lang="en">Honors & awards</span></h2></div>
+        <div class="records-scroll honors-scroll" tabindex="0" role="region" aria-label="Honors and awards">
+          <div class="honors-grid">
+            <article><span class="award-level"><span data-lang="zh">国家级 · 金奖</span><span data-lang="en">National · Gold</span></span><time>2025</time><h3><span data-lang="zh">中国研究生电子设计竞赛</span><span data-lang="en">China Graduate Electronic Design Contest</span></h3></article>
+            <article><span class="award-level"><span data-lang="zh">国家级 · 银奖</span><span data-lang="en">National · Silver</span></span><time>2022</time><h3><span data-lang="zh">“互联网+”大学生创新创业大赛</span><span data-lang="en">China International “Internet+” Competition</span></h3></article>
+            <article><span class="award-level"><span data-lang="zh">国家级 · 铜奖</span><span data-lang="en">National · Bronze</span></span><time>2025</time><h3><span data-lang="zh">中国研究生机器人创新设计大赛</span><span data-lang="en">China Graduate Robot Innovation Design Competition</span></h3></article>
+            <article><span class="award-level"><span data-lang="zh">国家级 · 铜奖</span><span data-lang="en">National · Bronze</span></span><time>2025</time><h3><span data-lang="zh">中国研究生人工智能创新大赛</span><span data-lang="en">China Graduate AI Innovation Competition</span></h3></article>
+            <article><span class="award-level"><span data-lang="zh">国家级 · 铜奖</span><span data-lang="en">National · Bronze</span></span><time>2026</time><h3><span data-lang="zh">中国研究生电子设计竞赛</span><span data-lang="en">China Graduate Electronic Design Contest</span></h3></article>
+            <article><span class="award-level"><span data-lang="zh">省级奖学金</span><span data-lang="en">Provincial scholarship</span></span><time>2023</time><h3><span data-lang="zh">浙江省政府奖学金</span><span data-lang="en">Zhejiang Provincial Government Scholarship</span></h3></article>
+            <article><span class="award-level"><span data-lang="zh">省级 · 铜奖</span><span data-lang="en">Provincial · Bronze</span></span><time>2022</time><h3><span data-lang="zh">“互联网+”大学生创新创业大赛（浙江省赛）</span><span data-lang="en">“Internet+” Competition, Zhejiang Province</span></h3></article>
+          </div>
+        </div>
+        <p class="scroll-hint"><span data-lang="zh">向下滚动查看全部</span><span data-lang="en">Scroll for all records</span></p>
+      </div>
+    </section>
+
+    <!-- Patents and software copyrights, grouped by record type. -->
+    <section class="section" id="ip">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">07 / INTELLECTUAL PROPERTY</p><h2><span data-lang="zh">知识产权</span><span data-lang="en">Intellectual property</span></h2></div>
+        <div class="ip-columns">
+          <div><h3 class="column-title">Patents <span>03</span></h3>
+            <article class="ip-card"><span class="status-tag granted"><span data-lang="zh">已授权</span><span data-lang="en">Granted</span></span><h4><span data-lang="zh">一种基于关联概率的遮挡环境下移动机械臂物体搜索方法</span><span data-lang="en">Object search for a mobile manipulator under occlusion based on association probability</span></h4><p>CN116664537B · <span data-lang="zh">排名 3/5</span><span data-lang="en">Rank 3/5</span></p><a href="https://pss-system.cponline.cnipa.gov.cn/" target="_blank" rel="noopener"><span data-lang="zh">国家知识产权局查询 ↗</span><span data-lang="en">CNIPA search ↗</span></a></article>
+            <article class="ip-card"><span class="status-tag granted"><span data-lang="zh">已授权</span><span data-lang="en">Granted</span></span><h4><span data-lang="zh">一种复杂环境下的红外绝缘子与钢帽的识别与分割方法</span><span data-lang="en">Recognition and segmentation of infrared insulators and steel caps in complex environments</span></h4><p>CN114842367B · <span data-lang="zh">排名 7/7</span><span data-lang="en">Rank 7/7</span></p><a href="https://pss-system.cponline.cnipa.gov.cn/" target="_blank" rel="noopener"><span data-lang="zh">国家知识产权局查询 ↗</span><span data-lang="en">CNIPA search ↗</span></a></article>
+            <article class="ip-card"><span class="status-tag"><span data-lang="zh">已公开</span><span data-lang="en">Published</span></span><h4><span data-lang="zh">一种适应于树林环境下的树干喷涂机器人的控制方法</span><span data-lang="en">Control method for a tree-trunk spraying robot in forest environments</span></h4><p>CN117109555A · <span data-lang="zh">排名 4/11</span><span data-lang="en">Rank 4/11</span></p><a href="https://pss-system.cponline.cnipa.gov.cn/" target="_blank" rel="noopener"><span data-lang="zh">国家知识产权局查询 ↗</span><span data-lang="en">CNIPA search ↗</span></a></article>
+          </div>
+          <div><h3 class="column-title">Software Copyrights <span>02</span></h3>
+            <article class="ip-card"><span class="status-tag granted"><span data-lang="zh">已登记</span><span data-lang="en">Registered</span></span><h4><span data-lang="zh">基于去雾抗扰的车道自动识别系统</span><span data-lang="en">Dehazing-based automatic lane recognition system</span></h4><p>2023SR0061095 · <span data-lang="zh">排名 1/7</span><span data-lang="en">Rank 1/7</span></p></article>
+            <article class="ip-card"><span class="status-tag granted"><span data-lang="zh">已登记</span><span data-lang="en">Registered</span></span><h4><span data-lang="zh">雾天车辆检测软件</span><span data-lang="en">Foggy-weather vehicle detection software</span></h4><p>2023SR0898877 · <span data-lang="zh">排名 2/4</span><span data-lang="en">Rank 2/4</span></p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Book log lists only books explicitly supplied by the site owner. -->
     <section class="section" id="reading">
       <div class="container">
-        <div class="section-heading"><p class="eyebrow">06 / BOOKS</p><h2><span data-lang="zh">书籍</span><span data-lang="en">Books</span></h2></div>
+        <div class="section-heading"><p class="eyebrow">08 / BOOKS</p><h2><span data-lang="zh">书籍</span><span data-lang="en">Books</span></h2></div>
         <div class="book-list">
           <article class="book-card">
             <div class="book-cover"><img src="/assets/images/visual-slam-14-transparent.png" width="420" height="544" loading="lazy" alt="《视觉 SLAM 十四讲：从理论到实践（第 2 版）》封面"></div>
@@ -233,44 +277,8 @@
         </div>
       </div>
     </section>
-
-    <!-- Awards remain fully available inside a compact scrollable record area. -->
-    <section class="section" id="honors">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">07 / HONORS</p><h2><span data-lang="zh">荣誉与奖励</span><span data-lang="en">Honors & awards</span></h2></div>
-        <div class="records-scroll honors-scroll" tabindex="0" role="region" aria-label="Honors and awards">
-          <div class="honors-grid">
-            <article><span class="award-level"><span data-lang="zh">国家级 · 金奖</span><span data-lang="en">National · Gold</span></span><time>2025</time><h3><span data-lang="zh">中国研究生电子设计竞赛</span><span data-lang="en">China Graduate Electronic Design Contest</span></h3></article>
-            <article><span class="award-level"><span data-lang="zh">国家级 · 银奖</span><span data-lang="en">National · Silver</span></span><time>2022</time><h3><span data-lang="zh">“互联网+”大学生创新创业大赛</span><span data-lang="en">China International “Internet+” Competition</span></h3></article>
-            <article><span class="award-level"><span data-lang="zh">国家级 · 铜奖</span><span data-lang="en">National · Bronze</span></span><time>2025</time><h3><span data-lang="zh">中国研究生机器人创新设计大赛</span><span data-lang="en">China Graduate Robot Innovation Design Competition</span></h3></article>
-            <article><span class="award-level"><span data-lang="zh">国家级 · 铜奖</span><span data-lang="en">National · Bronze</span></span><time>2025</time><h3><span data-lang="zh">中国研究生人工智能创新大赛</span><span data-lang="en">China Graduate AI Innovation Competition</span></h3></article>
-            <article><span class="award-level"><span data-lang="zh">国家级 · 铜奖</span><span data-lang="en">National · Bronze</span></span><time>2026</time><h3><span data-lang="zh">中国研究生电子设计竞赛</span><span data-lang="en">China Graduate Electronic Design Contest</span></h3></article>
-            <article><span class="award-level"><span data-lang="zh">省级奖学金</span><span data-lang="en">Provincial scholarship</span></span><time>2023</time><h3><span data-lang="zh">浙江省政府奖学金</span><span data-lang="en">Zhejiang Provincial Government Scholarship</span></h3></article>
-            <article><span class="award-level"><span data-lang="zh">省级 · 铜奖</span><span data-lang="en">Provincial · Bronze</span></span><time>2022</time><h3><span data-lang="zh">“互联网+”大学生创新创业大赛（浙江省赛）</span><span data-lang="en">“Internet+” Competition, Zhejiang Province</span></h3></article>
-          </div>
-        </div>
-        <p class="scroll-hint"><span data-lang="zh">向下滚动查看全部</span><span data-lang="en">Scroll for all records</span></p>
       </div>
-    </section>
-
-    <!-- Patents and software copyrights, grouped by record type. -->
-    <section class="section" id="ip">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">08 / INTELLECTUAL PROPERTY</p><h2><span data-lang="zh">知识产权</span><span data-lang="en">Intellectual property</span></h2></div>
-        <div class="ip-columns">
-          <div><h3 class="column-title">Patents <span>03</span></h3>
-            <article class="ip-card"><span class="status-tag granted"><span data-lang="zh">已授权</span><span data-lang="en">Granted</span></span><h4><span data-lang="zh">一种基于关联概率的遮挡环境下移动机械臂物体搜索方法</span><span data-lang="en">Object search for a mobile manipulator under occlusion based on association probability</span></h4><p>CN116664537B · <span data-lang="zh">排名 3/5</span><span data-lang="en">Rank 3/5</span></p><a href="https://pss-system.cponline.cnipa.gov.cn/" target="_blank" rel="noopener"><span data-lang="zh">国家知识产权局查询 ↗</span><span data-lang="en">CNIPA search ↗</span></a></article>
-            <article class="ip-card"><span class="status-tag granted"><span data-lang="zh">已授权</span><span data-lang="en">Granted</span></span><h4><span data-lang="zh">一种复杂环境下的红外绝缘子与钢帽的识别与分割方法</span><span data-lang="en">Recognition and segmentation of infrared insulators and steel caps in complex environments</span></h4><p>CN114842367B · <span data-lang="zh">排名 7/7</span><span data-lang="en">Rank 7/7</span></p><a href="https://pss-system.cponline.cnipa.gov.cn/" target="_blank" rel="noopener"><span data-lang="zh">国家知识产权局查询 ↗</span><span data-lang="en">CNIPA search ↗</span></a></article>
-            <article class="ip-card"><span class="status-tag"><span data-lang="zh">已公开</span><span data-lang="en">Published</span></span><h4><span data-lang="zh">一种适应于树林环境下的树干喷涂机器人的控制方法</span><span data-lang="en">Control method for a tree-trunk spraying robot in forest environments</span></h4><p>CN117109555A · <span data-lang="zh">排名 4/11</span><span data-lang="en">Rank 4/11</span></p><a href="https://pss-system.cponline.cnipa.gov.cn/" target="_blank" rel="noopener"><span data-lang="zh">国家知识产权局查询 ↗</span><span data-lang="en">CNIPA search ↗</span></a></article>
-          </div>
-          <div><h3 class="column-title">Software Copyrights <span>02</span></h3>
-            <article class="ip-card"><span class="status-tag granted"><span data-lang="zh">已登记</span><span data-lang="en">Registered</span></span><h4><span data-lang="zh">基于去雾抗扰的车道自动识别系统</span><span data-lang="en">Dehazing-based automatic lane recognition system</span></h4><p>2023SR0061095 · <span data-lang="zh">排名 1/7</span><span data-lang="en">Rank 1/7</span></p></article>
-            <article class="ip-card"><span class="status-tag granted"><span data-lang="zh">已登记</span><span data-lang="en">Registered</span></span><h4><span data-lang="zh">雾天车辆检测软件</span><span data-lang="en">Foggy-weather vehicle detection software</span></h4><p>2023SR0898877 · <span data-lang="zh">排名 2/4</span><span data-lang="en">Rank 2/4</span></p></article>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    </div>
   </main>
 
   <!-- Minimal site footer. -->
