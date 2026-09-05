@@ -30,6 +30,45 @@
 
   document.querySelector(".print-button").addEventListener("click", () => window.print());
 
+  // Reveal the email address first so opening a mail client is an explicit choice.
+  const emailAction = document.querySelector(".email-action");
+  const emailButton = document.querySelector(".email-button");
+  const emailPopover = document.querySelector(".email-popover");
+  const emailCopy = document.querySelector(".email-copy");
+  const emailStatus = document.querySelector(".email-copy-status");
+  const emailAddress = "kuangyi_chen@hdu.edu.cn";
+  const setEmailOpen = (open) => {
+    emailPopover.hidden = !open;
+    emailButton.setAttribute("aria-expanded", String(open));
+  };
+  emailButton.addEventListener("click", () => setEmailOpen(emailPopover.hidden));
+  emailCopy.addEventListener("click", async () => {
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(emailAddress);
+      } else {
+        const fallback = document.createElement("textarea");
+        fallback.value = emailAddress;
+        fallback.setAttribute("readonly", "");
+        fallback.style.position = "fixed";
+        fallback.style.opacity = "0";
+        document.body.append(fallback);
+        fallback.select();
+        document.execCommand("copy");
+        fallback.remove();
+      }
+      emailStatus.textContent = root.lang === "en" ? "Copied" : "已复制";
+    } catch {
+      emailStatus.textContent = root.lang === "en" ? "Copy failed" : "复制失败，请手动选择地址";
+    }
+  });
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".email-action")) setEmailOpen(false);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setEmailOpen(false);
+  });
+
   // Keep short lists open; only long record groups become internally scrollable.
   const scrollContainers = [...document.querySelectorAll(".records-scroll, .timeline-scroll")];
   const scrollHints = [...document.querySelectorAll(".scroll-hint")];

@@ -411,3 +411,14 @@ body{background-image:none}
   .publication-media{min-height:120px}
 }
 @media(prefers-reduced-motion:reduce){.work-overview a{transition:none}}
+
+/* Email stays in context until the visitor chooses to copy or open it. */
+.email-action{position:relative;display:inline-flex}
+.email-popover{position:absolute;z-index:10;top:calc(100% + 10px);left:0;display:grid;gap:9px;min-width:244px;padding:14px;background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:0 14px 28px rgba(23,35,63,.14);color:var(--text)}
+.email-popover[hidden]{display:none}
+.email-address{font-size:13px;font-weight:700;letter-spacing:.01em;white-space:nowrap}
+.email-copy,.email-popover a{display:inline-flex;align-items:center;justify-content:center;min-height:32px;padding:6px 9px;border:1px solid var(--line);border-radius:7px;background:transparent;color:var(--accent);font-size:12px;font-weight:700;text-decoration:none;cursor:pointer}
+.email-copy:hover,.email-popover a:hover{border-color:var(--accent);background:var(--surface-2)}
+.email-copy-status{min-height:1em;color:var(--muted);font-size:11px}
+@media(max-width:560px){.email-popover{left:auto;right:0;min-width:230px}}
+@media(prefers-reduced-motion:reduce){.email-popover{scroll-behavior:auto}}
