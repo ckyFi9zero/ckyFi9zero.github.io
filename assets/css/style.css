@@ -437,5 +437,7 @@ body{background-image:none}
 .certificate-link{display:inline-block;margin-top:auto;padding-top:12px;color:var(--accent);font-size:11px;font-weight:750}
 .certificate-card:hover{border-color:var(--accent);box-shadow:0 10px 24px rgba(49,87,200,.12);transform:translateY(-3px)}
 .certificate-card:hover .certificate-thumb img{transform:scale(1.035)}
+.honors-certificates{margin-bottom:24px}
+#projects .certificate-list{display:none}
 @media(max-width:560px){.certificate-grid{grid-template-columns:1fr}.certificate-thumb,.certificate-thumb img{height:190px;min-height:190px}}
 @media(prefers-reduced-motion:reduce){.certificate-card,.certificate-thumb img{transition:none}.certificate-card:hover,.certificate-card:hover .certificate-thumb img{transform:none}}
