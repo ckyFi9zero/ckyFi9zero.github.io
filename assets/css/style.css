@@ -210,6 +210,13 @@
 .publication-status{padding:4px 9px;border-radius:999px;background:color-mix(in srgb,var(--accent) 13%,transparent);color:var(--accent);font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .publication-body h4{margin:15px 0 10px;font-size:clamp(21px,2.7vw,29px);line-height:1.25;letter-spacing:-.025em}
 .publication-body>p{max-width:880px;margin:0;color:var(--muted);line-height:1.65}
+.publication-body>.publication-authors{margin:0 0 10px;color:var(--text);font-size:14px}
+.publication-authors strong{color:var(--accent)}
+.publication-body>.publication-doi{margin-top:14px;font-size:13px;font-weight:700}
+.publication-doi a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.publication-keywords{margin-top:14px;color:var(--muted);font-size:12px}
+.publication-keywords summary{width:max-content;color:var(--accent);font-weight:750;cursor:pointer}
+.publication-keywords p{margin:8px 0 0;line-height:1.6}
 .publication-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 .publication-tags span{padding:5px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:11px;font-weight:700}
 @media(hover:hover){.publication-card:hover{border-color:var(--accent);box-shadow:0 16px 34px rgba(49,87,200,.13);transform:translateY(-3px)}.publication-media:hover img{transform:scale(1.015)}}
