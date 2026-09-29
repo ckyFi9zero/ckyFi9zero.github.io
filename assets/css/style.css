@@ -211,6 +211,7 @@
 .publication-body h4{margin:15px 0 10px;font-size:clamp(21px,2.7vw,29px);line-height:1.25;letter-spacing:-.025em}
 .publication-body>p{max-width:880px;margin:0;color:var(--muted);line-height:1.65}
 .publication-body>.publication-authors{margin:0 0 10px;color:var(--text);font-size:14px}
+.publication-body>.publication-citation{margin-bottom:10px;font-size:13px}
 .publication-authors strong{color:var(--accent)}
 .publication-body>.publication-doi{margin-top:14px;font-size:13px;font-weight:700}
 .publication-doi a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
