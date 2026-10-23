@@ -118,7 +118,7 @@
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      const activeId = entry.target.id === "news" ? "research" : entry.target.id;
+      const activeId = entry.target.id;
       links.forEach((link) => link.classList.toggle("active", link.hash === `#${activeId}`));
     });
   }, { rootMargin: "-35% 0px -55% 0px" });

@@ -21,7 +21,7 @@
   <meta property="og:description" content="机器人鲁棒感知、恶劣天气感知与多模态传感研究。">
   <meta property="og:image" content="https://ckyfi9zero.github.io/assets/images/profile.webp">
   <meta name="twitter:card" content="summary">
-  <link rel="stylesheet" href="/assets/css/style.css?v=20261023">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20261023-profile">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,9 +48,8 @@
       </button>
       <div class="nav-links" id="nav-links">
         <a href="#about"><span data-lang="zh">关于</span><span data-lang="en">About</span></a>
-        <a href="#research"><span data-lang="zh">研究</span><span data-lang="en">Research</span></a>
+        <a href="#academic"><span data-lang="zh">论文</span><span data-lang="en">Publications</span></a>
         <a href="#experience"><span data-lang="zh">经历</span><span data-lang="en">Experience</span></a>
-        <a href="#academic"><span data-lang="zh">学术</span><span data-lang="en">Academic</span></a>
         <a href="#news"><span data-lang="zh">动态</span><span data-lang="en">Updates</span></a>
         <a href="#honors"><span data-lang="zh">荣誉</span><span data-lang="en">Honors</span></a>
         <a href="#ip"><span data-lang="zh">知识产权</span><span data-lang="en">IP</span></a>
@@ -108,26 +107,34 @@
           <div class="section-heading section-heading--intro"><p class="eyebrow">01 / PROFILE</p><h2><span data-lang="zh">研究简介</span><span data-lang="en">Research profile</span></h2></div>
           <div class="intro-body" id="research">
             <p class="intro-lead"><span data-lang="zh">我是杭州电子科技大学自动化学院控制工程硕士生，现于 <a href="https://hdu-raslab.github.io/" target="_blank" rel="noopener">RAS Lab</a> 开展机器人鲁棒感知研究。</span><span data-lang="en">I am an M.Eng. student in Control Engineering at Hangzhou Dianzi University, working on robust robot perception at the <a href="https://hdu-raslab.github.io/" target="_blank" rel="noopener">RAS Lab</a>.</span></p>
-            <p><span data-lang="zh">我关注复杂、非结构化真实环境中的可靠感知，使用深度学习或几何约束方法，缓解雨、雾、雪与沙尘条件下 LiDAR 传感器的数据退化。<strong>目前计划在机器人感知与自主系统方向继续攻读博士学位。</strong></span><span data-lang="en">My work focuses on reliable perception in complex, unstructured environments. I use deep learning or geometric-constraint-based methods to mitigate LiDAR degradation in rain, fog, snow, and dust. <strong>I plan to pursue a PhD in robot perception and autonomous systems.</strong></span></p>
-            <div class="research-statement">
-              <p><strong><span data-lang="zh">目标：</span><span data-lang="en">Goal: </span></strong><span data-lang="zh">提升机器人在复杂真实环境中的感知可靠性。</span><span data-lang="en">Improve the reliability of robot perception in complex real-world environments.</span></p>
-              <p><strong><span data-lang="zh">研究兴趣：</span><span data-lang="en">Research Interest: </span></strong><span class="research-keywords"><span data-lang="zh">机器人鲁棒感知与自主系统</span><span data-lang="en">Robust Robot Perception and Autonomous Systems</span></span></p>
-              <p><strong><span data-lang="zh">研究问题：</span><span data-lang="en">Research Question: </span></strong><span data-lang="zh">如何使用深度学习或几何约束方法，缓解恶劣天气下的传感器数据退化？</span><span data-lang="en">How can deep learning or geometric-constraint-based methods mitigate sensor degradation in adverse weather?</span></p>
-              <p><strong><span data-lang="zh">研究对象：</span><span data-lang="en">Research Objects: </span></strong><span data-lang="zh">LiDAR、三维点云、点云去噪、移动机器人</span><span data-lang="en">LiDAR, 3D Point Clouds, Point Cloud Denoising, Mobile Robots</span></p>
-            </div>
-            <p class="intro-email"><strong>Email:</strong> kuangyi_chen [AT] hdu.edu.cn</p>
-          </div>
-          <div class="work-overview" aria-label="工作概览 / Selected work">
-            <a href="#academic"><span class="overview-index">01</span><span class="overview-label"><span data-lang="zh">论文发表</span><span data-lang="en">Publications</span></span><strong>1</strong></a>
-            <a href="#ip"><span class="overview-index">02</span><span class="overview-label"><span data-lang="zh">知识产权</span><span data-lang="en">Intellectual property</span></span><strong>5</strong></a>
-            <a href="#honors"><span class="overview-index">03</span><span class="overview-label"><span data-lang="zh">荣誉奖励</span><span data-lang="en">Honors &amp; awards</span></span><strong>7</strong></a>
+            <p><span data-lang="zh">我的研究聚焦恶劣天气下的 LiDAR 感知与三维点云去噪，利用深度学习或几何约束方法提升机器人在真实环境中的感知可靠性。<strong>目前计划在机器人感知与自主系统方向继续攻读博士学位。</strong></span><span data-lang="en">My research focuses on LiDAR perception and 3D point-cloud denoising in adverse weather, using deep learning or geometric constraints to improve robot perception in real-world environments. <strong>I plan to pursue a PhD in robot perception and autonomous systems.</strong></span></p>
           </div>
         </section>
+
+    <!-- Publications follow the introduction so the main research is easy to find. -->
+    <section class="section" id="academic">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">02 / PUBLICATIONS</p><h2 id="publications-title"><span data-lang="zh">论文发表</span><span data-lang="en">Publications</span></h2></div>
+        <div class="records-scroll publications-scroll" tabindex="0" role="region" aria-labelledby="publications-title">
+        <article class="publication-card">
+          <div class="publication-media">
+            <img src="/assets/images/scdf-pipeline.png" width="2628" height="625" loading="lazy" alt="SCDF 方法流程：局部描述子提取、多线索能量融合及上下文扩散与分类">
+          </div>
+          <div class="publication-body">
+            <h3>SCDF: Seed-and-Contextualize Dust Filter for Real-Time LiDAR Perception</h3>
+            <p class="publication-authors"><strong>K. Chen</strong>, B. Zhang, Z. Zhang, X. Liu, and Q. Lu</p>
+            <p class="publication-venue"><cite>IEEE Robotics and Automation Letters</cite>, <span data-lang="zh">第 11 卷第 11 期，12783–12790 页，2026 年 11 月。</span><span data-lang="en">vol. 11, no. 11, pp. 12783–12790, Nov. 2026.</span></p>
+            <p class="publication-doi"><a href="https://doi.org/10.1109/LRA.2026.3734896" target="_blank" rel="noopener">DOI: 10.1109/LRA.2026.3734896 ↗</a></p>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
 
     <!-- Education rows pair each institution mark with its degree details. -->
     <section class="section" id="experience">
       <div class="container">
-        <div class="section-heading education-heading"><p class="eyebrow">02 / EXPERIENCE</p><h2><span data-lang="zh">教育经历</span><span data-lang="en">Education</span></h2></div>
+        <div class="section-heading education-heading"><p class="eyebrow">03 / EXPERIENCE</p><h2><span data-lang="zh">教育经历</span><span data-lang="en">Education</span></h2></div>
         <div class="education-list">
           <article class="education-row">
             <div class="school-logo dual-logo">
@@ -145,31 +152,6 @@
             <div class="school-logo"><img src="/assets/images/hdu-logo.webp" width="520" height="126" loading="lazy" alt="杭州电子科技大学标识"></div>
             <div class="education-detail"><ul><li><span class="education-period">2021 — 2025</span>，<span data-lang="zh">自动化工学学士，<a href="https://www.hdu.edu.cn/" target="_blank" rel="noopener">杭州电子科技大学</a>，中国杭州，2025 年优秀毕业生，导师：<a href="https://faculty.hdu.edu.cn/zdhxy/zbt/main.htm" target="_blank" rel="noopener">张波涛</a>、<a href="https://faculty.hdu.edu.cn/sgjlhxy/wj2/main.htm" target="_blank" rel="noopener">王坚</a>。</span><span data-lang="en">B.Eng. in Automation, <a href="https://www.hdu.edu.cn/" target="_blank" rel="noopener">Hangzhou Dianzi University</a>, Hangzhou, China. Outstanding Graduate (2025). Advisors: <a href="https://faculty.hdu.edu.cn/zdhxy/zbt/main.htm" target="_blank" rel="noopener">Botao Zhang</a> and <a href="https://faculty.hdu.edu.cn/sgjlhxy/wj2/main.htm" target="_blank" rel="noopener">Jian Wang</a>.</span></li></ul></div>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Academic records are grouped like a compact CV and can grow without changing the page structure. -->
-    <section class="section" id="academic">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">03 / ACADEMIC</p><h2><span data-lang="zh">学术</span><span data-lang="en">Academic</span></h2></div>
-        <div class="record-groups">
-          <section class="record-group" aria-labelledby="publications-title">
-            <h3 class="record-group-title" id="publications-title"><span data-lang="zh">论文发表</span><span data-lang="en">Publications</span></h3>
-            <div class="records-scroll publications-scroll" tabindex="0" role="region" aria-labelledby="publications-title">
-              <article class="publication-card">
-                <div class="publication-media">
-                  <img src="/assets/images/scdf-pipeline.png" width="2628" height="625" loading="lazy" alt="SCDF 方法流程：局部描述子提取、多线索能量融合及上下文扩散与分类">
-                </div>
-                <div class="publication-body">
-                  <h4>SCDF: Seed-and-Contextualize Dust Filter for Real-Time LiDAR Perception</h4>
-                  <p class="publication-authors"><strong>K. Chen</strong>, B. Zhang, Z. Zhang, X. Liu, and Q. Lu</p>
-                  <p class="publication-venue"><cite>IEEE Robotics and Automation Letters</cite>, <span data-lang="zh">第 11 卷第 11 期，12783–12790 页，2026 年 11 月。</span><span data-lang="en">vol. 11, no. 11, pp. 12783–12790, Nov. 2026.</span></p>
-                  <p class="publication-doi"><a href="https://doi.org/10.1109/LRA.2026.3734896" target="_blank" rel="noopener">DOI: 10.1109/LRA.2026.3734896 ↗</a></p>
-                </div>
-              </article>
-            </div>
-          </section>
         </div>
       </div>
     </section>
