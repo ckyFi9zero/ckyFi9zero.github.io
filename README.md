@@ -21,3 +21,19 @@ python3 -m http.server 4173
 ```
 
 Then open `http://127.0.0.1:4173/`.
+
+## CV PDF
+
+The sidebar CV link opens `output/pdf/kuangyi-chen-cv.pdf` in a new tab. The PDF
+is committed and served as a static file, so publishing the site requires no
+document-generation tools.
+
+To update the English CV, edit the content and revision date in
+`scripts/build_cv.py`, install ReportLab, then run:
+
+```sh
+python3 scripts/build_cv.py
+```
+
+Render and visually check the regenerated PDF before publishing it. The script
+embeds Times New Roman when available and otherwise uses the built-in Times font.

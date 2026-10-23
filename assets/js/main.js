@@ -28,8 +28,6 @@
     }
   });
 
-  document.querySelector(".print-button").addEventListener("click", () => window.print());
-
   // Reveal the email address first so opening a mail client is an explicit choice.
   const emailAction = document.querySelector(".email-action");
   const emailButton = document.querySelector(".email-button");
